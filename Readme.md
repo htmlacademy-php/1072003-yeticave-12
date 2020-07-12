@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Tatiana](https://up.htmlacademy.ru/php/12/user/1072003).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Попов](https://htmlacademy.ru/profile/id1181399).
 
 ---
 
