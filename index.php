@@ -44,13 +44,14 @@ $lots = [
     ],
 ];
 
-function format_cost ($cost) {
+function format_cost (float $cost): string
+{
     $cost = ceil($cost);
 
     if($cost >= 1000) {
         $cost = number_format($cost, 0, '.', ' ');
     }
-    return $result = $cost . " ₽";
+    return "{$cost} ₽";
 }
 ?>
 <!DOCTYPE html>
