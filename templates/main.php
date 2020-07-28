@@ -33,8 +33,11 @@
                                 <span class="lot__amount">Стартовая цена</span>
                                 <span class="lot__cost"><?=format_cost(esc($val['cost']))?></span>
                             </div>
-                            <div class="lot__timer timer">
-                                12:23
+                            <?php
+                                    [$hours, $minutes] = get_dt_range($val['expiry_date']);
+                            ?>
+                            <div class="lot__timer timer  <?= (int) $hours === 0 ? 'timer--finishing' : ''; ?>">
+                                <?="{$hours} : {$minutes}"; ?>
                             </div>
                         </div>
                     </div>
