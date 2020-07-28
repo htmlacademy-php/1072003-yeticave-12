@@ -56,7 +56,7 @@
 
             <!--заполните этот список из массива категорий-->
                 <li class="nav__item">
-                    <a href="pages/all-lots.html"><?=$value?></a>
+                    <a href="pages/all-lots.html"><?=esc($value)?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
