@@ -46,7 +46,7 @@ function get_dt_range(string $date): array
 
     $arr = [$hours_until_end, $minutes_until_end];
 
-    return $res = array_map(function($num) {
+    return array_map(function($num) {
         return str_pad($num, 2, "0", STR_PAD_LEFT);
     }, $arr);
 }

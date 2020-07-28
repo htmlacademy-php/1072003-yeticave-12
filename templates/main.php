@@ -34,10 +34,10 @@
                                 <span class="lot__cost"><?=format_cost(esc($val['cost']))?></span>
                             </div>
                             <?php
-                                    $timer = get_dt_range($val['expiry_date']);
+                                    [$hours, $minutes] = get_dt_range($val['expiry_date']);
                             ?>
-                            <div class="lot__timer timer  <? if((int) $timer[0] === 0) echo 'timer--finishing'; ?>">
-                                <?="{$timer[0]} : {$timer[1]}"; ?>
+                            <div class="lot__timer timer  <?= (int) $hours === 0 ? 'timer--finishing' : ''; ?>">
+                                <?="{$hours} : {$minutes}"; ?>
                             </div>
                         </div>
                     </div>
