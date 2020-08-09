@@ -1,0 +1,34 @@
+CREATE DATABASE yeticave DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+USE yeticave;
+
+CREATE TABLE category (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name CHAR,
+  symbol_code CHAR
+);
+
+CREATE TABLE rate (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  date_rate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  sum INT NOT NULL
+);
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  date_registration TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  email VARCHAR(128) NOT NULL UNIQUE,
+  name CHAR,
+  password CHAR,
+  contact CHAR
+);
+
+CREATE TABLE lots (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  date_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  name CHAR,
+  title CHAR,
+  url_img CHAR,
+  start_cost INT,
+  date_end TIMESTAMP,
+  step_rate INT
+);
