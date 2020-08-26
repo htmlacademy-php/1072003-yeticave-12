@@ -23,14 +23,19 @@ SELECT name FROM category;
 
 SELECT name, start_cost, url_img FROM lots;
 
+SELECT lots.*,
+(SELECT sum FROM bet WHERE bet.lot_id = lots.id
+ORDER BY bet.id DESC LIMIT 1) as current_cost
+FROM lots;
+
 SELECT lots.*, category.name
 FROM lots
 LEFT JOIN category ON lots.category_id = category.id
-ORDER BY CREATED_AT DESC;
+ORDER BY date_create DESC;
 
 /* показать лот по его id. Получить также название категории, к которой принадлежит лот */
 
-SELECT id FROM lots ORDER BY id;
+SELECT * FROM lots WHERE id IS NOT NULL;
 
 SELECT lots.*, category.name
 FROM lots
