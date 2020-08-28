@@ -35,7 +35,7 @@ ORDER BY date_create DESC;
 
 /* показать лот по его id. Получить также название категории, к которой принадлежит лот */
 
-SELECT * FROM lots WHERE id IS NOT NULL;
+SELECT * FROM lots WHERE id = 2;
 
 SELECT lots.*, category.name
 FROM lots
